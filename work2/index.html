@@ -14,6 +14,14 @@
          function color(str){
                  document.body.style.backgroundColor = str;
          }
+         var num = prompt("请输入一个数字");
+
+         if(isNaN(num)) {
+               alert("是一个数字");
+         }
+         else{
+                alert("是数字");
+         }
     </script>
 </head>
 
@@ -22,5 +30,6 @@
       <input type="button" value="设为黄色" onclick="color('yellow')">
       <input type="button" value="设为蓝色" onclick="color('blue')">
       <input type="button" value="设为自定义颜色" onclick="color('#22ee00')">
+
 </body>
 </html>

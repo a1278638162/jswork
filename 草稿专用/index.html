@@ -1,17 +1,29 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
 </head>
 <body>
     
 </body>
+</html>
 <script>
-var a=1;
-for(var i=10;i>0;i--){a*=i}
-console.log(a);
+    var y=16,a=2,x=2;//4+(10-4)=10 第二步把可以加的都列出来 然后验证两个数字是否为质数
+    for(a,x;a<=y&&x<=y;a++,x++){
+        var i=y-a;  
+        if(i>1){
+           if(x+i==y){//   1+9  2+8 3+7 4+6 5+5 6+4 3+7 8+2 9+1
+           if(a<=y/2){
+               var t = y - 1;
+            if(q=x&q<t){//2<=q<=y-1
+            if(y%q==0){//筛选质数
+            console.log(y + "可以拆分为两个质数" + x + "与" + i)
+       }
+        }
+    }
+           }
+    }
+}
 </script>
 </html>

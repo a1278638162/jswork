@@ -1,20 +1,23 @@
 
-let endseconds = new Date().getTime() + 15 * 1000;
+//let endseconds =  - new Date().getMinutes();
 
 let d = h = m = s = 0;
 
 let id = setInterval(seckill, 1000);
 
 function seckill() {
-    let nowtime = new Date();//获取当前时间
-    //获取时间差，单位秒
-    let remaining = parseInt((endseconds - nowtime.getTime()) / 1000);
-    //判断秒杀过期了没
+    let endseconds = new Date().getMinutes();
+    let nowtime = new Date();
+    let remaining = parseInt((60 - endseconds) *60);
+    var xs =  nowtime.getSeconds();
+    var ms = parseInt(60 - xs);//这里获取倒计时的秒数 
+    console.log(ms);
+    //console.log(ms);为什么是Nan？？？？ 这里是控制台第二个数字
     if (remaining > 0) {
         d = parseInt(remaining / 86400);
         h = parseInt((remaining / 3600) % 24);
         m = parseInt((remaining / 60) % 60);
-        s = parseInt(remaining % 60);
+        s = parseInt(ms);
         d = d < 10 ? '0' + d : d;
         h = h < 10 ? '0' + h : h;
         m = m < 10 ? '0' + m : m;

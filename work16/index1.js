@@ -1,15 +1,15 @@
 function animate(obj, option) {
-    clearInterval(obj.timer);           //防止多次触发事件，重复开启定时器
+    clearInterval(obj.timer);
     obj.timer = setInterval(function() {
         var flag = true;
         for (var k in option) {
-            var leader = parseInt(getStyle(obj, k)) || 0;   //获取制定元素当前属性值
-            var target = option [k];                        //获取制定元素目标属性值
-            var step = (target - leader) / 10;              //计算每次移动的步长
+            var leader = parseInt(getStyle(obj, k)) || 0;
+            var target = option[k];
+            var step = (target - leader) / 10;
             step = step > 0 ? Math.ceil(step) : Math.floor(step);
-            leader = leader + step;                         //计算属性值
-            obj.style[k] = leader + 'px';                   //设置属性值
-            if (leader != target) {                         //判断上否完成移动
+            leader = leader + step;
+            obj.style[k] = leader + 'px';
+            if (leader != target) {
                 flag = false;
             }
         }
@@ -18,14 +18,16 @@ function animate(obj, option) {
         }
     }, 15);
 }
- function getStyle(obj, attr) {
-     if (window.getComputedStyle) {                         //标准浏览器
+function getStyle(obj, attr) {
+    if (window.getComputedStyle) {
         return window.getComputedStyle(obj, null)[attr];
-     } else {
-         return obj.currentStyle[attr];
-     }
- }
- var obj = document.getElementById('box');
- obj.onclick = function () {
-     animate(obj, {'left':200, 'top': 50});
- };
+    } else {
+        return obj.currentStyle[attr];
+    }
+}
+var obj = document.getElementById('box');
+obj.onclick = function() {
+    var left = parseInt(Math.random()*500)
+    var top = parseInt(Math.random()*500)
+    animate(obj, {'left':left, 'top':top});
+}

@@ -1,23 +1,27 @@
 {
   "name": "jswork",
   "version": "1.0.0",
-  "description": "",
   "main": "index.js",
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "express": "^4.17.1",
+    "multer": "^1.4.2",
+    "nodejs-websocket": "^1.7.2",
+    "npm": "^6.12.0"
+  },
+  "devDependencies": {},
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/a1278638162/jswork.git"
+    "url": "git+https://github.com/yangjiazheng-yjz/jswork.git"
   },
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/a1278638162/jswork/issues"
+    "url": "https://github.com/yangjiazheng-yjz/jswork/issues"
   },
-  "homepage": "https://github.com/a1278638162/jswork#readme",
-  "dependencies": {
-    "body-parser": "^1.19.0",
-    "express": "^4.17.1"
-  }
+  "homepage": "https://github.com/yangjiazheng-yjz/jswork#readme",
+  "description": ""
 }
